@@ -1,0 +1,91 @@
+@use "../utils" as *;
+$btnMaxW: 423px;
+
+@mixin btn-x {
+  @include max-width($btnMaxW) {
+    padding-inline: 0;
+  }
+
+  @include rwd(var(--desktop)) {
+    padding-inline: 22px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: calc(var(--secondary-gap) - 2px);
+  margin-top: 60px;
+  margin-bottom: 40px;
+
+  @include rwd(var(--tablet)) {
+    margin-bottom: 30px;
+  }
+
+  @include rwd(var(--desktop)) {
+    margin-top: 94px;
+    margin-bottom: 50px;
+  }
+}
+
+.buttons__item {
+  color: var(--main-text-color);
+  background-color: var(--secondary-background-color);
+  font-weight: var(--secondary-font-weight);
+  line-height: 1.63;
+  letter-spacing: var(--main-letter-spacing);
+  border-radius: var(--main-border-radius);
+  border: none;
+  cursor: var(--pointer);
+  padding-block: 6px;
+  transition: color var(--transition-duration) var(--cubic-bezier),
+    background-color var(--transition-duration) var(--cubic-bezier),
+    box-shadow var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--main-background-color);
+    background-color: var(--main-selection-color);
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
+      0 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  @include max-width($btnMaxW) {
+    width: 110px;
+  }
+
+  @include max-width(375px) {
+    width: 102px;
+  }
+}
+
+.btn-1 {
+  padding-inline: 13px;
+
+  @include btn-x;
+}
+
+.btn-2 {
+  padding-inline: 40px;
+
+  @include btn-x;
+}
+
+.btn-3 {
+  padding-inline: 38px;
+
+  @include btn-x;
+}
+
+.btn-4 {
+  padding-inline: 28px;
+
+  @include btn-x;
+}
+
+.btn-5 {
+  padding-inline: 27px;
+
+  @include btn-x;
+}

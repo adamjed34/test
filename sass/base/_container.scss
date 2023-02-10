@@ -1,0 +1,18 @@
+@use "../utils" as *;
+
+.container {
+  max-width: var(--mobile);
+  margin: 0 auto;
+
+  @include width-from-to(280px, 767px) {
+    padding-inline: 15px;
+  }
+
+  @include rwd(var(--tablet)) {
+    max-width: var(--tablet);
+  }
+
+  @include rwd(var(--desktop)) {
+    max-width: var(--desktop);
+  }
+}

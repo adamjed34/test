@@ -1,0 +1,43 @@
+@use "../utils" as *;
+$smMenuMaxW: 385px;
+
+.sm-mobile-menu {
+  display: flex;
+  gap: calc(var(--secondary-gap) * 2);
+  flex-wrap: wrap;
+
+  @include max-width($smMenuMaxW) {
+    gap: calc(var(--secondary-gap) + 2px);
+  }
+}
+
+.sm-mobile-menu__item {
+  position: relative;
+
+  &:not(:last-child)::after {
+    content: "";
+    width: 1px;
+    height: 22px;
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    background-color: var(--main-text-color);
+    opacity: 0.2;
+
+    @include max-width($smMenuMaxW) {
+      right: -6px;
+    }
+  }
+}
+
+.sm-mobile-menu__link {
+  color: var(--main-selection-color);
+  font-size: 18px;
+  font-weight: var(--secondary-font-weight);
+  line-height: 1.22;
+  letter-spacing: var(--secondary-letter-spacing);
+
+  @include max-width(360px) {
+    font-size: 15px;
+  }
+}

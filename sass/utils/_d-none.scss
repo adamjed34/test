@@ -1,0 +1,21 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+$displayNoneMaxW: 767px;
+
+.d-none {
+  @include max-width($maxTablet) {
+    display: none;
+  }
+}
+
+.d-none-nav-contacts {
+  @include max-width($displayNoneMaxW) {
+    display: none;
+  }
+}
+
+ul.d-none-nav-contacts {
+  @include max-width($displayNoneMaxW) {
+    display: none;
+  }
+}

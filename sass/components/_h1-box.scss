@@ -1,0 +1,86 @@
+@use "../utils" as *;
+$rgbaH1Box: rgba(47, 48, 58, 0.4);
+
+h1 {
+  color: var(--main-background-color);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: var(--third-letter-spacing);
+  text-align: var(--text-center);
+  text-transform: var(--uppercase);
+  padding-inline: 13px;
+  margin-bottom: 30px;
+
+  @include rwd(var(--tablet)) {
+    padding-inline: 172px;
+  }
+
+  @include rwd(var(--desktop)) {
+    font-size: 44px;
+    line-height: 1.36;
+    padding-inline: 240px;
+  }
+}
+
+.h1-box {
+  background-image: url("../images/bg-h1/img-h1-mobile.jpg"),
+    linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  background-size: cover;
+  background-position: center;
+  background-color: #2f303a;
+  padding-block: 118px;
+
+  @include retina(2, 192, 310px) {
+    background-image: url("../images/bg-h1/img-h1-mobile@2x.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  }
+
+  @include retina(3, 288, 310px) {
+    background-image: url("../images/bg-h1/img-h1-mobile@3x.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  }
+
+  @include rwd(var(--tablet)) {
+    background-image: url("../images/bg-h1/img-h1-tablet.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  }
+
+  @include retina(2, 192, $tablet) {
+    background-image: url("../images/bg-h1/img-h1-tablet@2x.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  }
+
+  @include retina(3, 288, $tablet) {
+    background-image: url("../images/bg-h1/img-h1-tablet@3x.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  }
+
+  @include rwd(var(--desktop)) {
+    background-image: url("../images/bg-h1/img-h1-desktop.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    padding-block: 200px;
+  }
+
+  @include retina(2, 192, $desktop) {
+    background-image: url("../images/bg-h1/img-h1-desktop@2x.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  }
+
+  @include retina(3, 288, $desktop) {
+    background-image: url("../images/bg-h1/img-h1-desktop@3x.jpg"),
+      linear-gradient(90deg, $rgbaH1Box, $rgbaH1Box);
+  }
+}
+
+.h1-box__btn-case {
+  display: flex;
+  justify-content: center;
+}
+
+.h1-box__btn {
+  @include btn;
+  padding: 10px 41px 10px 42px;
+}

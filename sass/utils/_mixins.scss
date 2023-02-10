@@ -1,14 +1,90 @@
-//mobile first
-$tablet: 768px;
-$desktop: 1200px;
-// media devices
-@mixin tablet {
-  @media screen and (min-width: #{$tablet}) {
+@mixin rwd($breakpoint) {
+  @if $breakpoint == var(--tablet) {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == var(--desktop) {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin max-width($bp) {
+  @media screen and (max-width: $bp) {
     @content;
   }
 }
-@mixin desktop {
-  @media screen and (min-width: #{$desktop}) {
+
+@mixin width-from-to($minValue, $maxValue) {
+  @media screen and (min-width: $minValue) and (max-width: $maxValue) {
     @content;
   }
+}
+
+@mixin max-height($bp) {
+  @media screen and (max-height: $bp) {
+    @content;
+  }
+}
+
+@mixin max-height-landscape($bp) {
+  @media screen and (max-height: $bp) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin retina($value, $dpi, $bp) {
+  @media screen and (min-device-pixel-ratio: $value) and (min-width: $bp),
+  screen and (min-resolution: #{$dpi}dpi) and (min-width: $bp),
+  screen and (min-resolution: #{$value}dppx) and (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin btn {
+  background-color: var(--main-selection-color);
+  color: var(--main-background-color);
+  font-weight: var(--main-font-weight);
+  line-height: 1.88;
+  letter-spacing: var(--third-letter-spacing);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: var(--main-border-radius);
+  border: none;
+  cursor: var(--pointer);
+}
+
+@mixin bordered($color) {
+  border: 1px solid $color;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--main-gap);
+}
+
+@mixin sm($backgroundColor) {
+  width: 44px;
+  height: 44px;
+  background-color: $backgroundColor;
+  border-radius: 50%;
+  display: block;
+  padding: 12px;
+  transition: background-color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-selection-color);
+  }
+}
+
+@mixin label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  pointer-events: none;
 }

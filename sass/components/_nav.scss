@@ -1,0 +1,64 @@
+@use "../utils" as *;
+
+.nav-wrapper {
+  @include rwd(var(--desktop)) {
+    flex-grow: 2;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 46px;
+
+  @include width-from-to($tablet, $maxTablet) {
+    gap: calc(var(--main-gap) * 2);
+  }
+}
+
+.nav__item {
+  padding: 32px 0;
+  position: relative;
+}
+
+.nav__link {
+  color: var(--main-text-color);
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  letter-spacing: var(--secondary-letter-spacing);
+  transition: color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--main-selection-color);
+  }
+}
+
+%underlined {
+  content: "";
+  position: absolute;
+  width: 53px;
+  height: 4px;
+  background-color: var(--main-selection-color);
+  border-radius: calc(var(--main-border-radius) - 2px);
+  left: 0;
+  bottom: -1px;
+  pointer-events: none;
+}
+
+.nav__link--underline {
+  color: var(--main-selection-color);
+
+  &::after {
+    @extend %underlined;
+  }
+}
+
+.nav__link--underscore {
+  @extend .nav__link--underline;
+
+  &::after {
+    @extend %underlined;
+    width: 58px;
+  }
+}

@@ -1,0 +1,28 @@
+@use "../utils" as *;
+
+.sm-team {
+  display: flex;
+  justify-content: center;
+  gap: var(--secondary-gap);
+  margin-bottom: 24px;
+
+  @include rwd(var(--desktop)) {
+    margin-bottom: 30px;
+  }
+}
+
+.sm-team__link {
+  @include sm(var(--main-background-color));
+
+  &:hover,
+  &:focus {
+    .sm-team__icon {
+      fill: var(--main-background-color);
+    }
+  }
+}
+
+.sm-team__icon {
+  fill: var(--main-icons-color);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
+}

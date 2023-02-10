@@ -1,0 +1,41 @@
+@use "../utils" as *;
+
+.sm-footer-box {
+  @include rwd(var(--desktop)) {
+    padding-top: 12px;
+  }
+}
+
+.sm-footer-box__header {
+  color: var(--main-background-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  text-align: var(--text-center);
+  letter-spacing: var(--main-letter-spacing);
+  text-transform: var(--uppercase);
+  margin-bottom: 20px;
+
+  @include rwd(var(--desktop)) {
+    text-align: initial;
+  }
+}
+
+.sm-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--secondary-gap);
+  margin-bottom: 60px;
+
+  @include rwd(var(--tablet)) {
+    margin-bottom: 0;
+  }
+}
+
+.sm-footer__link {
+  @include sm(rgba(255, 255, 255, 0.1));
+}
+
+.sm-footer__icon {
+  fill: var(--main-background-color);
+}

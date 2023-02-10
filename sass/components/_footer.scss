@@ -1,148 +1,27 @@
+@use "../utils" as *;
+
 footer {
-  height: 603px;
-  width: 100%;
-  padding-top: 60px;
-  background-color: var(--main-color-background);
-  @include tablet {
-    height: 463px;
-  }
-  @include desktop {
-    height: 252px;
-    width: 100%;
-  }
+  background-color: #2f303a;
+  padding: 60px 0;
 }
-.footer-container {
-  display: block;
-  @include tablet {
+
+.footer {
+  @include rwd(var(--tablet)) {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-inline: 15px;
   }
-  @include desktop {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  &__first-part {
-    transition-property: underline;
-    transition-duration: 5000ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: center;
-  }
-  &__second-part {
-    fill: var(--main-color-white);
-    text-align: center;
-    @include tablet {
-      height: 463px;
-    }
-    @include desktop {
-      padding-left: 70px;
-    }
-  }
-  &__third-part {
-    @include tablet {
-      display: block;
-    }
-    @include desktop {
-      padding-left: 78px;
-    }
-  }
-  &__address {
-    color: var(--main-color-white);
-    font-size: 14px;
-    line-height: 1.71;
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-style: normal;
-    letter-spacing: 0.03rem;
-    @include tablet {
-    }
-    @include desktop {
-      text-align: left;
-    }
-  }
-  &__email {
-    margin-bottom: 8px;
-    margin-top: 8px;
-  }
-  &__email,
-  &__telnr {
-    color: var(--main-color-white-plus);
-    font-size: 14px;
-    line-height: 1.71;
-    cursor: pointer;
-    text-decoration-color: var(--main-color-grey);
-    transition-property: text-decoration-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__email:hover,
-  &__email:focus,
-  &__telnr:hover,
-  &__telnr:focus {
-    text-decoration: underline;
-  }
-  &__name {
-    color: var(--main-color-white);
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.17;
-    margin-bottom: 20px;
-    margin-top: 12px;
-  }
-  &__third-part-flexbox {
-    text-align: center;
-    @include tablet {
-      height: 463px;
-    }
-    @include desktop {
-      display: flex;
-      align-items: flex-end;
-      gap: 12px;
-    }
-  }
-}
-.footer-container-content {
-  margin-top: 60px;
-  @include tablet {
-  }
-  @include desktop {
-  }
-  &__name {
-    display: block;
-    color: var(--main-color-white);
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 0.03rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  &__input {
-    ::placeholder {
-      line-height: 1.25;
-      letter-spacing: 0.03rem;
-      color: var(--main-color-white-plus);
-    }
-    height: 50px;
-    width: 358px;
-    padding-left: 16px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    border: solid rgba(255, 255, 255, 0.3);
-    background-color: var(--main-color-background);
-    color: var(--main-color-white-plus);
+
+  @include rwd(var(--desktop)) {
+    justify-content: space-between;
   }
 }
 
-.button-footer {
-  margin-top: 20px;
-  margin-bottom: 60px;
-  @include tablet {
-  }
-  @include desktop {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding-left: 42px;
+.footer__box {
+  text-align: var(--text-center);
+
+  @include rwd(var(--desktop)) {
+    text-align: initial;
   }
 }

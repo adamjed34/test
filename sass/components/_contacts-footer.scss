@@ -1,0 +1,30 @@
+@use "../utils" as *;
+
+.contacts-footer {
+  margin-bottom: 60px;
+
+  @include rwd(var(--desktop)) {
+    margin-bottom: 0;
+  }
+
+  .contacts-footer__item {
+    margin-bottom: 8px;
+
+    @include rwd(var(--desktop)) {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.contacts-footer__link {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--main-font-size);
+  line-height: var(--third-line-height);
+  letter-spacing: var(--main-letter-spacing);
+  transition: color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--main-selection-color);
+  }
+}

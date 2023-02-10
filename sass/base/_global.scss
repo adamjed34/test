@@ -1,0 +1,23 @@
+body {
+  font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
+  color: var(--main-text-color);
+  background-color: var(--main-background-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+}

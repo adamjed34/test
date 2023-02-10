@@ -1,0 +1,71 @@
+@use "../utils" as *;
+
+.newsletter {
+  @include rwd(var(--desktop)) {
+    padding-top: 12px;
+  }
+}
+
+.newsletter__header {
+  color: var(--main-background-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  text-align: var(--text-center);
+  letter-spacing: var(--main-letter-spacing);
+  text-transform: var(--uppercase);
+  margin-bottom: 20px;
+
+  @include rwd(var(--desktop)) {
+    text-align: initial;
+  }
+}
+
+.newsletter__input {
+  color: var(--main-background-color);
+  background-color: inherit;
+  width: 100%;
+  @include bordered(rgba(255, 255, 255, 0.3));
+  border-radius: var(--main-border-radius);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
+  outline: none;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.25;
+    letter-spacing: var(--main-letter-spacing);
+  }
+
+  @include rwd(var(--tablet)) {
+    width: 450px;
+  }
+
+  @include rwd(var(--desktop)) {
+    width: 358px;
+    margin-right: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.newsletter__box {
+  display: flex;
+  justify-content: center;
+
+  @include rwd(var(--desktop)) {
+    display: inline-block;
+  }
+}
+
+.newsletter__btn {
+  @include btn;
+  position: relative;
+  padding: 10px 76px 10px 42px;
+}
+
+.newsletter__icon-send {
+  --icon-send: currentColor;
+  position: absolute;
+  top: 13px;
+  right: 28px;
+}

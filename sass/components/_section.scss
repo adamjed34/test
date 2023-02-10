@@ -1,0 +1,33 @@
+@use "../utils" as *;
+
+.section {
+  padding: 60px 0;
+
+  @include rwd(var(--desktop)) {
+    padding-block: 94px;
+  }
+}
+
+.strengths.section {
+  @include rwd(var(--tablet)) {
+    padding-bottom: 45px;
+  }
+
+  @include rwd(var(--desktop)) {
+    padding-bottom: 0;
+  }
+}
+
+.section__header {
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: var(--main-letter-spacing);
+  text-align: var(--text-center);
+  margin-bottom: 30px;
+
+  @include rwd(var(--desktop)) {
+    font-size: 36px;
+    line-height: var(--secondary-line-height);
+    margin-bottom: 50px;
+  }
+}

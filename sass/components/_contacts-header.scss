@@ -1,0 +1,42 @@
+@use "../utils" as *;
+
+.contacts-header {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--main-gap);
+
+  @include width-from-to($tablet, $maxTablet) {
+    flex-direction: column;
+    gap: var(--secondary-gap);
+  }
+}
+
+.contacts-header__item {
+  @include width-from-to($tablet, $maxTablet) {
+    padding-right: 27px;
+  }
+}
+
+.contacts-header__link {
+  color: var(--secondary-text-color);
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--secondary-font-size);
+  line-height: var(--secondary-line-height);
+  letter-spacing: var(--secondary-letter-spacing);
+  transition: color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--main-selection-color);
+  }
+}
+
+.contacts-header__icon {
+  --icon-envelope-smartphone: currentColor;
+  transform: translateY(1px);
+  margin-right: 6px;
+
+  &--setup {
+    transform: translateY(3px);
+  }
+}

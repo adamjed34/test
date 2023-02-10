@@ -1,0 +1,46 @@
+@use "../utils" as *;
+
+.strengths {
+  @include flex;
+}
+
+.strengths__item {
+  width: 100%;
+
+  @include rwd(var(--tablet)) {
+    width: 354px;
+  }
+
+  @include rwd(var(--desktop)) {
+    width: 270px;
+  }
+}
+
+.strengths__header {
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  letter-spacing: var(--main-letter-spacing);
+  text-transform: var(--uppercase);
+  text-align: var(--text-center);
+  margin-bottom: 10px;
+
+  @include rwd(var(--tablet)) {
+    text-align: start;
+  }
+}
+
+.strengths__text {
+  color: var(--secondary-text-color);
+  font-size: var(--main-font-size);
+  line-height: var(--third-line-height);
+  letter-spacing: var(--main-letter-spacing);
+}
+
+.strengths__icon {
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: var(--main-border-radius);
+  text-align: var(--text-center);
+  padding-block: 25px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,16 @@
+@use "../utils" as *;
+
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px;
+
+  @include rwd(var(--tablet)) {
+    padding: 0 15px;
+  }
+}

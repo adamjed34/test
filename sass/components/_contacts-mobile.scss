@@ -1,0 +1,31 @@
+@use "../utils" as *;
+
+.contacts-mobile {
+  margin-bottom: 64px;
+}
+
+.contacts-mobile__link {
+  display: inline-block;
+  color: var(--secondary-text-color);
+  font-size: 24px;
+  font-weight: var(--secondary-font-weight);
+  line-height: var(--secondary-line-height);
+  letter-spacing: var(--secondary-letter-spacing);
+  transition: color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--main-selection-color);
+  }
+
+  &--different {
+    color: var(--main-selection-color);
+    font-size: 34px;
+    line-height: 1.18;
+    margin-bottom: 32px;
+
+    @include max-width(360px) {
+      font-size: 28px;
+    }
+  }
+}
