@@ -1,0 +1,16 @@
+:root {
+  --main-color-grey: rgba(117, 117, 117, 1);
+  --main-color-blue: rgba(33, 150, 243, 1);
+  --main-color-white: rgba(255, 255, 255, 1);
+  --main-color-white-plus: rgba(255, 255, 255, 0.6);
+  --secondary--black: rgba(0, 0, 0, 1);
+  --main-color-background: rgba(47, 48, 58, 1);
+  --main-color-button: rgba(245, 244, 250, 1);
+  --main-color-svg: rgba(175, 177, 184, 1);
+  --main-line-height-1: 1.88;
+  --main-font-weight-1: 500;
+}
+.team__socialmedia-content {
+  fill: var(--main-color-white);
+  background-color: rgba(255, 255, 255, 0.1);
+}

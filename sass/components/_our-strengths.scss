@@ -1,0 +1,44 @@
+.our-strengths {
+  &__list {
+    > li {
+      font-size: 14px;
+    }
+    p {
+      line-height: 2;
+      color: var(--main-color-grey);
+    }
+    list-style: none;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    margin-left: 15px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    @include tablet {
+    }
+    @include desktop {
+      margin-top: 94px;
+      margin-bottom: 94px;
+    }
+  }
+  &__items {
+    h3 {
+      line-height: 1.14;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      margin-top: 30px;
+    }
+    justify-content: center;
+    width: 270px;
+  }
+  &__icon-antenna,
+  &__icon-clock,
+  &__icon-diagram,
+  &__icon-astronaut {
+    background-color: rgba(245, 244, 250, 1);
+  }
+  &--changed-margin {
+    margin-bottom: 94px;
+    margin-top: 30px;
+  }
+}

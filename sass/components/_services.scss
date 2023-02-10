@@ -1,0 +1,26 @@
+.services {
+  &__list {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  &__item {
+    list-style: none;
+    position: relative;
+  }
+  &__description {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.17;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    color: var(--main-color-white);
+    position: absolute;
+    bottom: 0;
+    padding-top: 27px;
+    margin-top: 224px;
+  }
+}

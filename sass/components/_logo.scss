@@ -1,25 +1,33 @@
 .logo {
-  font-family: $secondaryFont;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.38;
-  color: $logoColor;
-  &__primary-part {
-    color: $accentColor;
-    text-transform: capitalize;
-  }
+  text-decoration: none;
+  text-align: center;
   @include tablet {
-    &-header {
-      margin-right: 83px;
-    }
   }
   @include desktop {
-    &-header {
-      margin-right: 93px;
-    }
+    margin-right: 93px;
   }
-}
-.logo-footer {
-  display: inline-block;
-  color: $primaryColor;
+  &__first-part {
+    color: var(--main-color-blue);
+    font-size: 26px;
+    line-height: 1.19;
+    font-weight: 700;
+    font-family: raleway;
+  }
+  &__second-part {
+    color: var(--secondary--black);
+    font-size: 26px;
+    line-height: 1.19;
+    font-weight: 700;
+    font-family: raleway;
+  }
+  &__third-part {
+    color: var(--main-color-white);
+    font-size: 26px;
+    line-height: 1.19;
+    font-weight: 700;
+    font-family: raleway;
+  }
+  &--changed-decoration {
+    text-decoration: none;
+  }
 }
