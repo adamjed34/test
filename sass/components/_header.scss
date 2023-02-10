@@ -1,0 +1,121 @@
+.header {
+  width: 100%;
+  position: relative;
+  //bottom border for header
+    &--border {
+      border-bottom: 1px solid $borderNavColor;
+    }
+  &__menu,
+  &__contact {
+    display: none;
+  }
+  &__nav {
+    padding: 16px 0;
+  }
+  &__menu-svg {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      cursor: pointer;
+      fill: $accentColor;
+    }
+  }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    &__menu-svg {
+      display: none;
+    }
+    &__menu,
+    &__contact {
+      display: contents;
+    }
+    &__nav {
+      padding: 26px 0;
+      display: flex;
+      align-items: center;
+      margin-right: 101px;
+    }
+    &__menu-item:not(:last-child) {
+      margin-right: 60px;
+    }
+    &__menu-link {
+      display: inline-block;
+      font-weight: 500;
+      line-height: 1.17;
+      color: $secondaryColor;
+      transition: $transition-nav;
+      position: relative;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+    }
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      margin: 21px 0 21px -18px;
+    }
+    &__contact-item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &__contact-link {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.17;
+      color: $textColor;
+      display: flex;
+      align-items: center;
+      transition: $transition-nav;
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+    }
+    &__icon {
+      margin-right: 8px;
+      --color2: currentColor;
+      fill: var(--color2);
+    }
+    //nav element active
+    &__menu-link--active::after {
+      content: "";
+      width: 53px;
+      height: 4px;
+      display: block;
+      border-radius: 2px;
+      background-color: $accentColor;
+      position: absolute;
+      top: 49px;
+    }
+  }
+  @include desktop {
+    &__nav {
+      padding: 24px 0;
+    }
+    &__menu-item:not(:last-child) {
+      margin-right: 46px;
+    }
+    &__contact {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__contact-item:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+    &__contact-link {
+      font-size: 14px;
+    }
+    //nav element active
+    &__menu-link--active::after {
+      top: 47px;
+    }
+  }
+}

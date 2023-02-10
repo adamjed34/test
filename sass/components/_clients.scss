@@ -1,0 +1,46 @@
+.clients {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spaceGap;
+  }
+  &__item {
+    width: 170px;
+    height: 90px;
+    border: 1px solid $iconsColor;
+    border-radius: 3px;
+    transition: $transition-clients;
+    flex-basis: calc((100% - $spaceGap) / 2);
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      border: 1px solid $accentColor;
+    }
+  }
+  &__link {
+    display: block;
+    fill: $iconsColor;
+    transition: $transition-clients;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover,
+    &:focus {
+      fill: $accentColor;
+    }
+  }
+  @include tablet {
+    gap: $spaceGap;
+    &__item {
+      flex-basis: calc((100% - 2 * $spaceGap) / 3);
+      text-align: left;
+    }
+  }
+  @include desktop {
+    &__items {
+      flex-wrap: nowrap;
+    }
+  }
+}

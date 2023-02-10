@@ -1,0 +1,55 @@
+body {
+  font-family: $primaryFont;
+  color: $textColor;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+a {
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+.section {
+  padding: 60px 0;
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include desktop {
+    padding: 94px 0;
+  }
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.section__header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: $secondaryColor;
+  margin-bottom: 50px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

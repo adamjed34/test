@@ -1,0 +1,25 @@
+.logo {
+  font-family: $secondaryFont;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.38;
+  color: $logoColor;
+  &__primary-part {
+    color: $accentColor;
+    text-transform: capitalize;
+  }
+  @include tablet {
+    &-header {
+      margin-right: 83px;
+    }
+  }
+  @include desktop {
+    &-header {
+      margin-right: 93px;
+    }
+  }
+}
+.logo-footer {
+  display: inline-block;
+  color: $primaryColor;
+}

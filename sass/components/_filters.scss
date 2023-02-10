@@ -1,0 +1,46 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  column-gap: 8px;
+  row-gap: 15px;
+  max-width: 450px;
+  &__button {
+    background-color: $bgTeamButtonColor;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 4px;
+    font-family: $primaryFont;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+    color: $secondaryColor;
+    transition: $transition-filters;
+    &:hover,
+    &:focus {
+      color: $primaryColor;
+      background-color: $accentColor;
+      cursor: pointer;
+      box-shadow: 0px 4px 4px $shadowColor;
+    }
+  }
+  &__item:nth-child(1) &__button {
+    padding: 6px 13px;
+  }
+  &__item:nth-child(2) &__button {
+    padding: 6px 39px 6px 40px;
+  }
+  &__item:nth-child(3) &__button {
+    padding: 6px 38px 6px 37px;
+  }
+  &__item:nth-child(4) &__button {
+    padding: 6px 28px;
+  }
+  &__item:nth-child(5) &__button {
+    padding: 6px 27px 6px 26px;
+  }
+  @include tablet {
+    justify-content: center;
+    min-width: 100%;
+  }
+}

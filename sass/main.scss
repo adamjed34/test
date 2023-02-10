@@ -1,0 +1,16 @@
+@use "./utils/mixins" as *;
+@import "./utils/variables";
+@import "./utils/global";
+@import "./components/header";
+@import "./components/headline";
+@import "./components/advantages";
+@import "./components/offer";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/filters";
+@import "./components/projects";
+@import "./components/modal";
+@import "./components/form-modal";
+@import "./components/logo";
+@import "./components/mobile-menu";
