@@ -400,8 +400,7 @@ header {
 }
 .contacts-header__link {
   color: var(--secondary-text-color);
-  font-weight: var(--secondary-font-weight);
-  font-size: var(--secondary-font-size);
+
   line-height: var(--secondary-line-height);
   letter-spacing: var(--secondary-letter-spacing);
   -webkit-transition: color var(--transition-duration) var(--cubic-bezier);
