@@ -325,7 +325,7 @@ header {
   .nav-wrapper {
     -webkit-box-flex: 2;
     -ms-flex-positive: 2;
-    flex-grow: 2;
+    flex-grow: 4;
   }
 }
 .nav {
@@ -510,7 +510,6 @@ h1 {
     background-image: url("../images/bg-h1/img-h1-desktop.jpg"),
       -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
     background-image: url("../images/bg-h1/img-h1-desktop.jpg"),
-      linear-gradient(90deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
     background-size: 1600px;
     background-repeat: no-repeat;
     padding-block: 200px;
@@ -524,7 +523,6 @@ h1 {
     background-image: url("../images/bg-h1/img-h1-desktop@2x.jpg"),
       -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
     background-image: url("../images/bg-h1/img-h1-desktop@2x.jpg"),
-      linear-gradient(90deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
 @media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
@@ -535,7 +533,6 @@ h1 {
     background-image: url("../images/bg-h1/img-h1-desktop@3x.jpg"),
       -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
     background-image: url("../images/bg-h1/img-h1-desktop@3x.jpg"),
-      linear-gradient(90deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
 .h1-box__btn-case {
