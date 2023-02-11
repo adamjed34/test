@@ -7,7 +7,7 @@
   --main-icons-color: #afb1b8;
   --secondary-icons-color: #000;
   --main-font-size: 14px;
-  --secondary-font-size: 12px;
+  --secondary-font-size: 14px;
   --main-font-weight: 700;
   --secondary-font-weight: 500;
   --main-line-height: 1.14;
@@ -400,7 +400,8 @@ header {
 }
 .contacts-header__link {
   color: var(--secondary-text-color);
-
+  font-weight: var(--secondary-font-weight);
+  font-size: var(--secondary-font-size);
   line-height: var(--secondary-line-height);
   letter-spacing: var(--secondary-letter-spacing);
   -webkit-transition: color var(--transition-duration) var(--cubic-bezier);
